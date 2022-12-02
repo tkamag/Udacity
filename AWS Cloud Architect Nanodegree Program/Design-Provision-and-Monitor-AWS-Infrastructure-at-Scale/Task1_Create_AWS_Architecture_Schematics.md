@@ -20,6 +20,9 @@ You have been asked to plan and provision a cost-effective AWS infrastructure fo
 
 Use [LucidChart](https://www.lucidchart.com/) or a similar diagramming application to create your schematic. Export your schematic as a PDF and save as ``Udacity_Diagram_1.pdf``.
 
+ <img width="100%" src="./fig/Udacity_Diagram_1_pdf.PNG">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Part1 - AWS Architecture Schematics </b></p>
+
 ### A.3.2 Part 2
 
 You have been asked to plan a SERVERLESS architecture schematic for a new application development project. The project requires the following AWS infrastructure and services.
@@ -36,8 +39,5 @@ You have been asked to plan a SERVERLESS architecture schematic for a new applic
 Export your schematic as a PDF and save as ``Udacity_Diagram_2.pdf``
 ____
 
-<object data="./doc/Udacity_Diagram_1.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="./doc/Udacity_Diagram_1.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+ <img width="100%" src="./fig/Udacity_Diagram_2_pdf.PNG">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Part2 - AWS Architecture Schematics </b></p>
