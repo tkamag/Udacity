@@ -36,10 +36,8 @@ You have been asked to plan a SERVERLESS architecture schematic for a new applic
 Export your schematic as a PDF and save as ``Udacity_Diagram_2.pdf``
 ____
 
-<object data="http://yoursite.com/the.pdf" type="application/pdf" width="700px" height="700px">
+<object data="./doc/Udacity_Diagram_1.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="./doc/Udacity_Diagram_1.pdf">
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
     </embed>
 </object>
-
-
