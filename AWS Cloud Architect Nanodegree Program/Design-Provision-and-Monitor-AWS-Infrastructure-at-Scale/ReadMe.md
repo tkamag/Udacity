@@ -146,7 +146,7 @@ In order to complete this task, please ensure your IAM users have been [granted 
 3. Upload Terraform files, screenshots, schematics and CSV files to your GitHub repo
 Before submitting your project, please check to confirm that you have completed all of the requirements in the **Project Rubric**.
 
-## [Part1: Data Durability And Recovery](./Part1_Data_Durability_And_Recovery.md)
+## [Task1: Create AWS Architecture Schematics](./Task1_Create_AWS_Architecture_Schematics.md)
 
 ## [Part2: Failover And Recovery](./Part2_Failover_And_Recovery.md)
 
