@@ -1,105 +1,31 @@
-# Data Durability And Recovery
+## A.3 Task 2: Calculate Infrastructure Costs
 
-1. Pick two AWS regions. An active region and a standby region (only **us-east-1** and **us-west-2** regions are allowed)
+1. Use the [AWS Pricing Calculator](https://calculator.aws/#/) to estimate how much it will cost to run the services in your Part 1 diagram for one month.
 
-2. Use CloudFormation to create one VPC in each region. Name the VPC in the active region **Primary** and name the VPC in the standby region **Secondary**.
+* Target a monthly estimate between $8,000-$10,000.
+* Be mindful of AWS regions when you are estimating costs.
+* Export the estimate as a CSV file named [``Initial_Cost_Estimate.csv``](./doc/Increased_Cost%20Estimate.csv).
 
-**NOTE**: Be sure to use different CIDR address ranges for the VPCs.
+ <img width="100%" src="./fig/Initial_Cost_Estimate.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Initial Cost Estimate </b></p>
 
-**SAVE**: Screenshots of both VPCs after they are created. Name your screenshots:
-____
+1. Return to the [AWS Pricing Calculator](https://calculator.aws/#/) and reconfigure your estimates for the following scenarios:
 
- <img width="100%" src="./fig/00-primary_VPC.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Primary VPC in North Virginia </b></p>
+* Your budget has been reduced from $8,000-$10,000 to a maximum of $6,500. What services will you modify to meet this new budget? Export the updated costs in a CSV file named [``Reduced_Cost_Estimate.csv``](./doc/Reduced_Cost_Estimate.csv) and write up a brief narrative of the changes you made in the CSV file below the cost estimate.
 
- <img width="100%" src="./fig/01-secondary_VPC.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Secondary VPC in North California </b></p>
-_____
+To be in line with our new budget we will make some adjustments to our configuration:
 
-## A.1 Highly durable RDS Database
+ <img width="100%" src="./fig/Increased_Cost Estimate.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Reduced Cost Estimate </b></p>
 
-1. Create a new RDS Subnet group in the active and standby region using private subnets.
+* Your budget has been increased to $20,000. What resources will you add and why?
+Think about where to add redundancy and how to improve performance. Re-configure your estimate to a monthly invoice of $18K-20K. Export the updated costs to a CSV file named [``Increased_Cost Estimate.csv``](./doc/Increased_Cost%20Estimate.csv) and write up a brief narrative of the changes you made in the CSV file below the cost estimate.
 
-2. Create a new MySQL, multi-AZ database in the active region. The database must:
+ <img width="100%" src="./fig/Reduced_Cost_Estimate.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Increased Cost Estimate </b></p>
 
-* Be a **burstable** instance class.
-* Have only the **UDARR-Database** security group.
-* Have an initial database called **udacity**.
 
-3. Create a read replica database in the standby region. This database has the same requirements as the database in the active region.
+ <img width="100%" src="./fig/Udacity_Diagram_1_pdf.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Part1 - AWS Architecture Schematics </b></p>
 
-**SAVE**: Screenshots of the configuration of the databases in the active and secondary region after they are created. Also, save screenshots of the configuration of the database subnet groups as well as route tables associated with those subnets.
-____
-
-### A.1.1 Primary and Secondary Database Config
-
- <img width="100%" src="./fig/00-primaryDB_config.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Primary VPC in North Virginia </b></p>
-
- <img width="100%" src="./fig/01-Read_replicaDB_config.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Secondary VPC in North California </b></p>
-
-### A.1.2 Primary and Secondary Database Subnet Groups
-
- <img width="100%" src="./fig/00-primary-RDS_subnet_group.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Primary Database Subnet groups in North Virginia </b></p>
-
- <img width="100%" src="./fig/01-secondaryDB_subnet_group.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Secondary Database Subnet groups in North California </b></p>
-
-### A.1.3 Primary and Secondary VPC Subnets
-
- <img width="100%" src="./fig/00-primary_VPC_subnets.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Primary VPC subnet in North Virginia </b></p>
-
- <img width="100%" src="./fig/01-secondary_VPC_subnets.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Secondary VPC subnet in North California </b></p>
-
-### A.1.4 Primary and Secondary Subnet Routing
-
- <img width="100%" src="./fig/00-primary_VPC_route_table.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Primary VPC subnet routing in North Virginia </b></p>
-
- <img width="100%" src="./fig/01-secondary_VPC_route_table.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Secondary VPC subnet routing in North California </b></p>
-
-## A.2 Availability Estimate
-
-Write a paragraph or two describing the achievable Recovery Time Objective (RTO) and Recovery Point Objective (RPO) for this Multi-AZ, multi-region database in terms of:
-
-1. Minimum RTO for a single AZ outage
-2. Minimum RTO for a single region outage
-3. Minimum RPO for a single AZ outage
-4. Minimum RPO for a single region outage
-
-**Save** your answers in a text file named [estimate.txt](./estimates.md)
-
-## A.3 Demonstrate normal usage
-
-In the **active** region:
-
-1. Create an EC2 keypair in the region
-
-2. Launch an Amazon Linux EC2 instance in the active region. Configure the instance to use the VPC's public subnet and security group (**UDARR-Application**).
-
-3. SSH to the instance and connect to the "udacity" database in the RDS instance.
-
-4. Verify that you can create a table, insert data, and read data from the database.
-
-5. You have now demonstrated that you can read and write to the primary database.
-
-**Save** the log of connecting to the databse, creating the table, writing to and reading from the table in a text file called [log_primary.txt](./log_primary.sql)
-
-## A.4 Monitor database
-
-1. Observe the **DB Connections** to the database and how this metric changes as you connect to the database
-
-2. Observe the **Replication** configuration with your multi-region read replica.
-
-**Save** screenshots of the DB Connections and the database replication configuration. Name your screenshots:
-
- <img width="100%" src="./fig/03-monitoring_connections.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Primary VPC subnet in North Virginia </b></p>
-
- <img width="100%" src="./fig/03-monitoring_replication.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Secondary VPC subnet in North California </b></p>
+./fig/Udacity_Diagram_1_pdf.png
