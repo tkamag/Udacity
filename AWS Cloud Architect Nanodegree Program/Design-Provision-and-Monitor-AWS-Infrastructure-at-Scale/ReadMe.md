@@ -148,6 +148,6 @@ Before submitting your project, please check to confirm that you have completed 
 
 ## [Task1: Create AWS Architecture Schematics](./Task1_Create_AWS_Architecture_Schematics.md)
 
-## [Part2: Failover And Recovery](./Part2_Failover_And_Recovery.md)
+## [Part2: Failover And Recovery](./Task2_Calculate_Infrastructure_Costs.md)
 
 ## [Part3: Website Resiliency](./Part3_Website_Resiliency.md)
