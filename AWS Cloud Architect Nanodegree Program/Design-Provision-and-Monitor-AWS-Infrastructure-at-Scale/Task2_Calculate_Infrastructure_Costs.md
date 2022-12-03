@@ -9,6 +9,7 @@
  <img width="100%" src="./fig/Initial_Cost_Estimate.png">
 <p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Initial Cost Estimate </b></p>
 
+
 1. Return to the [AWS Pricing Calculator](https://calculator.aws/#/) and reconfigure your estimates for the following scenarios:
 
 * Your budget has been reduced from $8,000-$10,000 to a maximum of $6,500. What services will you modify to meet this new budget? Export the updated costs in a CSV file named [``Reduced_Cost_Estimate.csv``](./doc/Reduced_Cost_Estimate.csv) and write up a brief narrative of the changes you made in the CSV file below the cost estimate.

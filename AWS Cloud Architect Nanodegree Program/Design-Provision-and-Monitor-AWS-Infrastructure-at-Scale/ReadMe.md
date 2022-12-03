@@ -146,8 +146,8 @@ In order to complete this task, please ensure your IAM users have been [granted 
 3. Upload Terraform files, screenshots, schematics and CSV files to your GitHub repo
 Before submitting your project, please check to confirm that you have completed all of the requirements in the **Project Rubric**.
 
-## [Task1: Create AWS Architecture Schematics](./Task1_Create_AWS_Architecture_Schematics.md)
+## [Task 1: Create AWS Architecture Schematics](./Task1_Create_AWS_Architecture_Schematics.md)
 
-## [Part2: Failover And Recovery](./Task2_Calculate_Infrastructure_Costs.md)
+## [Task 2: Calculate Infrastructure Costs](./Task2_Calculate_Infrastructure_Costs.md)
 
-## [Part3: Website Resiliency](./Part3_Website_Resiliency.md)
+## [Part 3: Website Resiliency](./Part3_Website_Resiliency.md)
