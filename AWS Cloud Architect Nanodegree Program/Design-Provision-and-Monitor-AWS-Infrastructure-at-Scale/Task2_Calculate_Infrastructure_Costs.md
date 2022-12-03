@@ -24,9 +24,3 @@ Think about where to add redundancy and how to improve performance. Re-configure
 
  <img width="100%" src="./fig/Reduced_Cost_Estimate.png">
 <p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Increased Cost Estimate </b></p>
-
-
- <img width="100%" src="./fig/Udacity_Diagram_1_pdf.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Part1 - AWS Architecture Schematics </b></p>
-
-./fig/Udacity_Diagram_1_pdf.png
