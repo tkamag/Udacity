@@ -150,4 +150,12 @@ Before submitting your project, please check to confirm that you have completed 
 
 ## [Task 2: Calculate Infrastructure Costs](./Task2_Calculate_Infrastructure_Costs.md)
 
-## [Part 3: Website Resiliency](./Part3_Website_Resiliency.md)
+## [Task 3: Configure Permissions](./Part3_Website_Resiliency.md)
+
+## [Task 4: Set up Cost Monitoring](./Part3_Website_Resiliency.md)
+
+## [Task 5: Use Terraform to Provision AWS Infrastructure](./Part3_Website_Resiliency.md)
+
+### Part 1
+
+## [Task 6: Destroy the Infrastructure using Terraform and prepare for submission](./Part3_Website_Resiliency.md)
