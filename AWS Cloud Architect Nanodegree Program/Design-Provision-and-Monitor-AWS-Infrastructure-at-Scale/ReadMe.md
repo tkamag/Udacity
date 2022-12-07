@@ -164,6 +164,6 @@ Before submitting your project, please check to confirm that you have completed 
 
 ## [Task 4: Set up Cost Monitoring](./Task4_Set_up_Cost_Monitoring.md)
 
-## [Task 5: Use Terraform to Provision AWS Infrastructure](./Task5_ Use_Terraform_to_Provision_AWS_Infrastructure.md)
+## [Task 5: Use Terraform to Provision AWS Infrastructure](./Task5_Use_Terraform_to_Provision_AWS_Infrastructure.md)
 
 ## [Task 6: Destroy the Infrastructure using Terraform and prepare for submission](./Task6_Destroy_the_Infrastructure_using_Terraform_and_prepare_for_submission.md)
