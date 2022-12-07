@@ -1,4 +1,4 @@
-## A.3 Task 2: Calculate Infrastructure Costs
+## Task 2: Calculate Infrastructure Costs
 
 1. Use the [AWS Pricing Calculator](https://calculator.aws/#/) to estimate how much it will cost to run the services in your Part 1 diagram for one month.
 

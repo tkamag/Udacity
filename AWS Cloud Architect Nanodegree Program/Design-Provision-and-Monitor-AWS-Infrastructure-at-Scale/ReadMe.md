@@ -100,9 +100,19 @@ In order to complete this task, please ensure your IAM users have been [granted 
 
 8. Before Logging off, return to the CloudTrail configuration page. Disable S3 logging.
 
-## A.5 Task 5 : Use Terraform to Provision AWS Infrastructure
+## A.5 [OPTIONAL] Task 4: Set up Cost Monitoring
 
-### A.5.1 Part 1
+1. Configure CloudWatch billing alarm
+
+2. Set up a Billing alarm with a $5 threshold
+
+3. Set up notification so that you get an email alert when the alarm is triggered.
+
+Save a screenshot of the CloudWatch Alarms page showing the new alarm with a green OK status as ``CloudWatch_alarm.png`` or ``CloudWatch_alarm.jpg``
+ovision AWS Infrastructure
+
+## A.6 Task 5: Use Terraform to Provision AWS Infrastructure
+### A.6.1 Part 1
 
 1. Download the **starter code**.
 
@@ -122,7 +132,7 @@ In order to complete this task, please ensure your IAM users have been [granted 
 
 6. Take an updated screenshot of the AWS console showing only the 4 t2.micro instances and save it as ``Terraform_1_2.png`` or ``Terraform_1_2.jpg``
 
-## A.5.2 Part 2
+## A.6.2 Part 2
 
 1. In the Exercise_2 folder, write the code to deploy an AWS Lambda Function using Terraform. Your code should include:
 
@@ -137,7 +147,7 @@ In order to complete this task, please ensure your IAM users have been [granted 
 
 4. Take a screenshot of the CloudWatch log entry for the lambda function execution and save it as ``Terraform_2_3.png`` or ``Terraform_2_3.jpg``.
 
-## Task 6: Destroy the Infrastructure using Terraform and prepare for submission
+## A.7 Task 6: Destroy the Infrastructure using Terraform and prepare for submission
 
 1. Destroy all running provisioned infrastructure using Terraform so as not to incur unwanted charges.
 
@@ -150,12 +160,10 @@ Before submitting your project, please check to confirm that you have completed 
 
 ## [Task 2: Calculate Infrastructure Costs](./Task2_Calculate_Infrastructure_Costs.md)
 
-## [Task 3: Configure Permissions](./Part3_Website_Resiliency.md)
+## [Task 3: Configure Permissions](./Task3_Configure_Permissions..md)
 
-## [Task 4: Set up Cost Monitoring](./Part3_Website_Resiliency.md)
+## [Task 4: Set up Cost Monitoring](./Task4_Set_up_Cost_Monitoring.md)
 
-## [Task 5: Use Terraform to Provision AWS Infrastructure](./Part3_Website_Resiliency.md)
+## [Task 5: Use Terraform to Provision AWS Infrastructure](./Task5_ Use_Terraform_to_Provision_AWS_Infrastructure.md)
 
-### Part 1
-
-## [Task 6: Destroy the Infrastructure using Terraform and prepare for submission](./Part3_Website_Resiliency.md)
+## [Task 6: Destroy the Infrastructure using Terraform and prepare for submission](./Task6_Destroy_the_Infrastructure_using_Terraform_and_prepare_for_submission.md)
