@@ -43,9 +43,9 @@ In this task, the objective is to deploy the CloudFormation stacks that will cre
 ### 1. Deploy the S3 buckets
 
 ````python
-aws cloudformation create-stack \\
-    --region us-east-1 \\
-    --stack-name c3-s3 \\
+aws cloudformation create-stack
+    --region us-east-1
+    --stack-name c3-s3
     --template-body file://CloudFormation/c3-s3-tk-nd202212.yml
 ````
 
@@ -59,9 +59,9 @@ Result:
 ### 2. Deploy the VPC and Subnets
 
 ````python
-aws cloudformation create-stack \\
-    --region us-east-1 \\
-    --stack-name c3-vpc \\
+aws cloudformation create-stack
+    --region us-east-1
+    --stack-name c3-vpc
     --template-body file://CloudFormation/c3-vpc-tk-nd202212.yml
 ````
 Result:
@@ -74,7 +74,10 @@ Result:
 ### 3. Deploy the Application Stack
 
 ````python
-aws cloudformation create-stack ``
-    --region us-east-1 
-    --stack-name c3-app --template-body file://CloudFormation/c3-app-tk-nd202212.yml --parameters ParameterKey=KeyPair,ParameterValue=c3-n3-key --capabilities CAPABILITY_IAM
+aws cloudformation create-stack
+    --region us-east-1
+    --stack-name c3-app
+    --template-body file://CloudFormation/c3-app-tk-nd202212.yml
+    --parameters ParameterKey=KeyPair,ParameterValue=c3-n3-key
+    --capabilities CAPABILITY_IAM
 ````
