@@ -26,8 +26,8 @@ Instructions and examples in this project will make use of the ``AWS CLI`` in or
 ### Local setup of git and GitHub Repository
 You will need to clone or download this [GitHub repo](https://github.com/udacity/nd063-c3-design-for-security-project-starter) in order to work on and submit this project.
 
-## [Part1: Deploy Project Environment](./Exercise-1-Deploy-Project-Environment/Exercise_1_Deploy_Project_Environment.md)
+## [Exercise 1 - Deploy Project Environment](./Exercise-1-Deploy-Project-Environment/Exercise_1_Deploy_Project_Environment.md)
 
-## [Part2: Failover And Recovery](./Part2_Failover_And_Recovery.md)
+## [Exercise 2: Enable Security Monitoring](./Part2_Failover_And_Recovery.md)
 
 ## [Part3: Website Resiliency](./Part3_Website_Resiliency.md)
