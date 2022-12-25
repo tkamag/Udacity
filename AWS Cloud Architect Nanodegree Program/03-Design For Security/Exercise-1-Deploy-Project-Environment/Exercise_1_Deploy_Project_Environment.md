@@ -109,13 +109,13 @@ You can get these from the Outputs section of the c3-app stack.
 
 Upload the free recipes to the free recipe S3 bucket from step 2. Do this by typing this command into the console (you will replace <BucketNameRecipesFree> with your bucket name):
 
-````JSON
+````python
 aws s3 cp /recipe/free_recipe.txt s3://cand-c3-free-recipes-293591104301/ --region us-east-1
 ````
 
 Upload the secret recipes to the secret recipe S3 bucket from step 2. Do this by typing this command into the console (you will replace <BucketNameRecipesSecret> with your bucket name):
 
-````JSON
+````python
 aws s3 cp /recipe/secret_recipe.txt s3://cand-c3-free-recipes-293591104301/ --region us-east-1
 ````
 
