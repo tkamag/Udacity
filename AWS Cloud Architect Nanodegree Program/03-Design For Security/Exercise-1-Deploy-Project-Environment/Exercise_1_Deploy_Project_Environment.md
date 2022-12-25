@@ -16,11 +16,12 @@ Additionally, a CloudFormation template have been provided which will deploy the
 #### VPC Stack for the underlying network
 
 * A VPC with 2 public subnets, one private subnet, and internet gateways etc for internet access.
+  * [c3-vpc.Yaml](./CloudFormation/c3-vpc-tk-nd202212.yml)
 
 #### S3 bucket stack
 
 * 2 S3 buckets that will contain data objects for the application.
-  * [c3-S3](./CloudFormation/c3-s3-tk-nd202212.yml)
+  * [c3-s3.Yaml](./CloudFormation/c3-s3-tk-nd202212.yml)
 
 #### Application stack
 
@@ -33,3 +34,4 @@ Additionally, a CloudFormation template have been provided which will deploy the
 * Security groups
 
 * IAM role
+  * [c3-app.Yaml](./CloudFormation/c3-app-tk-nd202212.yml)
