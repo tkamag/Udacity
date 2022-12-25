@@ -122,6 +122,6 @@ aws s3 cp /recipe/secret_recipe.txt s3://cand-c3-free-recipes-293591104301/ --re
 #### 4. Test the application
 Invoke the web service using the application load balancer URL:
 
-````JSON
+````python
 http://c1-web-service-alb-962176417.us-east-1.elb.amazonaws.com/free_recipe
 ````
