@@ -20,7 +20,7 @@ Additionally, a CloudFormation template have been provided which will deploy the
 #### S3 bucket stack
 
 * 2 S3 buckets that will contain data objects for the application.
-* ````YAML
+````YAML
 Description:  This template deploys an S3 bucket for storage of recipes.
 
 Resources:
@@ -55,7 +55,6 @@ Outputs:
       Name: BucketArnVPCFlowLogs
 
 ````
-
 #### Application stack
 
 * An EC2 instance that will act as an external attacker from which we will test the ability of our environment to handle threats
