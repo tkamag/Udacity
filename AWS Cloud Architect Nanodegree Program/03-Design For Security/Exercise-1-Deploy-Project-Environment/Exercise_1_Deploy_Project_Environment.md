@@ -56,3 +56,25 @@ Result:
     "StackId": "arn:aws:cloudformation:us-east-1:293591104301:stack/c3-s3/ad452fe0-840c-11ed-bdba-0a65dd233c97"
 }
 ````
+### 2. Deploy the VPC and Subnets
+
+````python
+aws cloudformation create-stack \\
+    --region us-east-1 \\
+    --stack-name c3-vpc \\
+    --template-body file://CloudFormation/c3-vpc-tk-nd202212.yml
+````
+Result:
+
+````JSON
+{
+    "StackId": "arn:aws:cloudformation:us-east-1:293591104301:stack/c3-vpc/6ca30e20-840d-11ed-be30-0e2f3ffeccf1"
+}
+````
+### 3. Deploy the Application Stack
+
+````python
+aws cloudformation create-stack ``
+    --region us-east-1 
+    --stack-name c3-app --template-body file://CloudFormation/c3-app-tk-nd202212.yml --parameters ParameterKey=KeyPair,ParameterValue=c3-n3-key --capabilities CAPABILITY_IAM
+````
