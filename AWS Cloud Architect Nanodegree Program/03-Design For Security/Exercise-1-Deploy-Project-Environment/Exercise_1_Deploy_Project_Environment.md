@@ -20,41 +20,8 @@ Additionally, a CloudFormation template have been provided which will deploy the
 #### S3 bucket stack
 
 * 2 S3 buckets that will contain data objects for the application.
-````YAML
-Description:  This template deploys an S3 bucket for storage of recipes.
+* [c3-S3](./CloudFormation/c3-s3-tk-nd202212.yml)
 
-Resources:
-  S3BucketRecipesFree:
-    Type: AWS::S3::Bucket
-    Properties:
-      BucketName: !Join [ "-", [ "cand-c3-free-recipes", !Ref 'AWS::AccountId' ] ]
-  S3BucketRecipesSecret:
-    Type: AWS::S3::Bucket
-    Properties:
-      BucketName: !Join [ "-", [ "cand-c3-secret-recipes", !Ref 'AWS::AccountId' ] ]
-  S3BucketVPCFlowLogs:
-      Type: AWS::S3::Bucket
-      Properties:
-        BucketName: !Join [ "-", [ "cand-c3-vpc-flow-logs", !Ref 'AWS::AccountId' ] ]
-
-Outputs:
-  BucketNameRecipesFree:
-    Value: !Ref 'S3BucketRecipesFree'
-    Description: Name of the Amazon S3 bucket that you will upload free recipes to.
-    Export:
-      Name: BucketNameRecipesFree
-  BucketNameRecipesSecret:
-    Value: !Ref 'S3BucketRecipesSecret'
-    Description: Name of the Amazon S3 bucket that you will upload secret recipes to.
-    Export:
-      Name: BucketNameRecipesSecret
-  BucketArnVPCFlowLogs:
-    Value: !GetAtt S3BucketVPCFlowLogs.Arn
-    Description: Arn of the Amazon S3 bucket that have vpc flow logs for this project
-    Export:
-      Name: BucketArnVPCFlowLogs
-
-````
 #### Application stack
 
 * An EC2 instance that will act as an external attacker from which we will test the ability of our environment to handle threats
