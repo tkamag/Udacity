@@ -40,7 +40,8 @@ Additionally, a CloudFormation template have been provided which will deploy the
 
 In this task, the objective is to deploy the CloudFormation stacks that will create the below environment.
 
-#### 1. Deploy the S3 buckets
+### 1. From the root directory of the repository - execute the below command to deploy the templates.
+#### A.1. Deploy the S3 buckets
 
 ````python
 aws cloudformation create-stack
@@ -57,7 +58,7 @@ Result:
 }
 ````
 
-#### 2. Deploy the VPC and Subnets
+#### A.2. Deploy the VPC and Subnets
 
 ````python
 aws cloudformation create-stack
@@ -74,7 +75,7 @@ Result:
 }
 ````
 
-#### 3. Deploy the Application Stack
+#### A.3. Deploy the Application Stack
 
 ````python
 aws cloudformation create-stack
@@ -91,4 +92,36 @@ Result:
 {
     "StackId": "arn:aws:cloudformation:us-east-1:293591104301:stack/c3-app/67349ab0-840f-11ed-b4fa-12f58f880c2b"
 }
+````
+#### 2. Once you see Status is CREATE_COMPLETE for all 3 stacks, obtain the required parameters needed for the project.
+
+Obtain the name of the S3 bucket by navigating to the Outputs section of the stack:
+
+<img width="70%" src="./figure/stacks_completed.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Successful CloudFormation Infrastructure</b></p>
+
+You can get these from the Outputs section of the c3-app stack.
+
+<img width="70%" src="./figure/c3-app-outputs.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Outputs section of the c3-app stack</b></p>
+
+#### 3. Upload data to S3 buckets
+
+Upload the free recipes to the free recipe S3 bucket from step 2. Do this by typing this command into the console (you will replace <BucketNameRecipesFree> with your bucket name):
+
+````JSON
+aws s3 cp /recipe/free_recipe.txt s3://cand-c3-free-recipes-293591104301/ --region us-east-1
+````
+
+Upload the secret recipes to the secret recipe S3 bucket from step 2. Do this by typing this command into the console (you will replace <BucketNameRecipesSecret> with your bucket name):
+
+````JSON
+aws s3 cp /recipe/secret_recipe.txt s3://cand-c3-free-recipes-293591104301/ --region us-east-1
+````
+
+#### 4. Test the application
+Invoke the web service using the application load balancer URL:
+
+````JSON
+http://c1-web-service-alb-962176417.us-east-1.elb.amazonaws.com/free_recipe
 ````
