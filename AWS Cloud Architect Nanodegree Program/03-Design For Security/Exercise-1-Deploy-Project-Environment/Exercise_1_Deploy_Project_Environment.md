@@ -41,9 +41,14 @@ Additionally, a CloudFormation template have been provided which will deploy the
 In this task, the objective is to deploy the CloudFormation stacks that will create the below environment.
 
 ### 1. Deploy the S3 buckets
-````aws
-aws cloudformation create-stack --region us-east-1 --stack-name c3-s3 --template-body file://CloudFormation/c3-s3-tk-nd202212.yml
 
+````json
+aws cloudformation create-stack --region us-east-1 --stack-name c3-s3 --template-body file://CloudFormation/c3-s3-tk-nd202212.yml
+````
+
+Result:
+
+````JSON
 {
     "StackId": "arn:aws:cloudformation:us-east-1:293591104301:stack/c3-s3/ad452fe0-840c-11ed-bdba-0a65dd233c97"
 }
