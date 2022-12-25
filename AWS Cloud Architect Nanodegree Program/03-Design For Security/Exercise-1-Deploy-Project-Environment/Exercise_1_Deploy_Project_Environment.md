@@ -97,7 +97,7 @@ Result:
 
 Obtain the name of the S3 bucket by navigating to the Outputs section of the stack:
 
-<img width="100%" src="./figure/stacks_completed.png">
+<img width="130%" src="./figure/stacks_completed.png">
 <p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Successful CloudFormation Infrastructure</b></p>
 
 You can get these from the Outputs section of the c3-app stack.
