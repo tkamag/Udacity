@@ -3,7 +3,7 @@ ____
 
 ## Task 1: Review Architecture Diagram
 
-<img width="100%" src="./figure/AWS-WebServiceDiagram-v1-insecure.png">
+<img width="70%" src="./figure/AWS-WebServiceDiagram-v1-insecure.png">
 <p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Starting architecture diagram</b></p>
 
 1. Create a new RDS Subnet group in the active and standby region using private subnets.
