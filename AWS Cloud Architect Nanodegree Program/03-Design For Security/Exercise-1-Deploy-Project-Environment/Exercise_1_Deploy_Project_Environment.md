@@ -125,3 +125,6 @@ Invoke the web service using the application load balancer URL:
 ````python
 http://c1-web-service-alb-962176417.us-east-1.elb.amazonaws.com/free_recipe
 ````
+
+<img width="100%" src="./figure/test_application1.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b>  Recipe for banana bread</b></p>
