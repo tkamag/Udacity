@@ -134,3 +134,11 @@ http://c1-web-service-alb-962176417.us-east-1.elb.amazonaws.com/free_recipe
 
 <img width="100%" src="./figure/test_application1.png">
 <p style='text-align: center; margin-right: 3em; font-family: Serif;'><b>  Recipe for banana bread</b></p>
+
+## Task 4: Identify Bad Practices
+
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security. List these 2 practices, and a justification for your choices, in the text file named E1T4.txt.
+
+**Deliverables**:
+
+* [E1T4.txt](./E1T4.txt) - Text file identifying 2 poor security practices with justification.
