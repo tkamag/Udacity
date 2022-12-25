@@ -42,8 +42,11 @@ In this task, the objective is to deploy the CloudFormation stacks that will cre
 
 ### 1. Deploy the S3 buckets
 
-````json
-aws cloudformation create-stack --region us-east-1 --stack-name c3-s3 --template-body file://CloudFormation/c3-s3-tk-nd202212.yml
+````python
+aws cloudformation create-stack \\
+    --region us-east-1 \\
+    --stack-name c3-s3 \\
+    --template-body file://CloudFormation/c3-s3-tk-nd202212.yml
 ````
 
 Result:
