@@ -20,7 +20,7 @@ Additionally, a CloudFormation template have been provided which will deploy the
 #### S3 bucket stack
 
 * 2 S3 buckets that will contain data objects for the application.
-* [c3-S3](./CloudFormation/c3-s3-tk-nd202212.yml)
+  * [c3-S3](./CloudFormation/c3-s3-tk-nd202212.yml)
 
 #### Application stack
 
