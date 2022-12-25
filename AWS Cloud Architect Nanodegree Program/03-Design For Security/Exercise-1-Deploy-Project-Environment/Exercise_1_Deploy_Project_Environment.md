@@ -13,9 +13,9 @@ In this task, the objective is to familiarize yourself with the starter code and
 
 Additionally, a CloudFormation template have been provided which will deploy the following resources in AWS:
 
-#### VPC Stack for the underlying network
+#### 1. VPC Stack for the underlying network
 
-* A VPC with 2 public subnets, one private subnet, and internet gateways etc for internet access.
+* 1.1 A VPC with 2 public subnets, one private subnet, and internet gateways etc for internet access.
   * [c3-vpc.Yaml](./CloudFormation/c3-vpc-tk-nd202212.yml)
 
 #### S3 bucket stack
