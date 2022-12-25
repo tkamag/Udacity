@@ -18,12 +18,12 @@ Additionally, a CloudFormation template have been provided which will deploy the
 * 1.1 A VPC with 2 public subnets, one private subnet, and internet gateways etc for internet access.
   * [c3-vpc.Yaml](./CloudFormation/c3-vpc-tk-nd202212.yml)
 
-#### S3 bucket stack
+#### 2; S3 bucket stack
 
-* 2 S3 buckets that will contain data objects for the application.
+* 2.1 2 S3 buckets that will contain data objects for the application.
   * [c3-s3.Yaml](./CloudFormation/c3-s3-tk-nd202212.yml)
 
-#### Application stack
+#### 3. Application stack
 
 * An EC2 instance that will act as an external attacker from which we will test the ability of our environment to handle threats
 
@@ -35,3 +35,16 @@ Additionally, a CloudFormation template have been provided which will deploy the
 
 * IAM role
   * [c3-app.Yaml](./CloudFormation/c3-app-tk-nd202212.yml)
+
+## Task 3: Deployment of Initial Infrastructure
+
+In this task, the objective is to deploy the CloudFormation stacks that will create the below environment.
+
+### 1. Deploy the S3 buckets
+````aws
+aws cloudformation create-stack --region us-east-1 --stack-name c3-s3 --template-body file://CloudFormation/c3-s3-tk-nd202212.yml
+
+{
+    "StackId": "arn:aws:cloudformation:us-east-1:293591104301:stack/c3-s3/ad452fe0-840c-11ed-bdba-0a65dd233c97"
+}
+````
