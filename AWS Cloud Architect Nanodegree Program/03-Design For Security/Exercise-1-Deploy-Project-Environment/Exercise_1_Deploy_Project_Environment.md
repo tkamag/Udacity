@@ -13,15 +13,15 @@ In this task, the objective is to familiarize yourself with the starter code and
 
 Additionally, a CloudFormation template have been provided which will deploy the following resources in AWS:
 
-### VPC Stack for the underlying network
+#### VPC Stack for the underlying network
 
 * A VPC with 2 public subnets, one private subnet, and internet gateways etc for internet access.
 
-## S3 bucket stack
+### S3 bucket stack
 
 * 2 S3 buckets that will contain data objects for the application.
 
-## Application stack
+#### Application stack
 
 * An EC2 instance that will act as an external attacker from which we will test the ability of our environment to handle threats
 
