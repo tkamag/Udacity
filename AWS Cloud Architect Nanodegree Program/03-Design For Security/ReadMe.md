@@ -28,6 +28,6 @@ You will need to clone or download this [GitHub repo](https://github.com/udacity
 
 ## [Exercise 1: Deploy Project Environment](./Exercise-1-Deploy-Project-Environment/Exercise_1_Deploy_Project_Environment.md)
 
-## [Exercise 2: Enable Security Monitoring](./Exercice-2-Enable Security Monitoring/Exercise_2_Enable_Security_Monitoring)
+## [Exercise 2: Enable Security Monitoring](./Exercice-2-Enable%20Security%20Monitoring/Exercise_2_Enable_Security_Monitoring.md)
 
 ## [Part3: Website Resiliency](./Part3_Website_Resiliency.md)
