@@ -30,4 +30,6 @@ You will need to clone or download this [GitHub repo](https://github.com/udacity
 
 ## [Exercise 2: Enable Security Monitoring](./Exercice-2-Enable-Security-Monitoring/Exercise_2_Enable_Security_Monitoring.md)
 
-## [Exercise 3 - Attack Simulation](./Exercise-3-Attack-Simulation/Exercise_3_Attack_Simulation.md)
+## [Exercise 3: Attack Simulation](./Exercise-3-Attack-Simulation/Exercise_3_Attack_Simulation.md)
+
+## [Exercise 4: Implement-Security-Hardening](./Exercise-4-Implement-Security-Hardening/Exercise-4-Implement-Security-Hardening.md)
