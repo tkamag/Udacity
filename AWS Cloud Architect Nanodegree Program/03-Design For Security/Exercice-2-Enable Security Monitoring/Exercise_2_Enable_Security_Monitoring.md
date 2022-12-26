@@ -1,7 +1,9 @@
-# Exercise 1 - Deploy Project Environment
+# Exercise 2 - Enable Security Monitoring
+
+First, we will set up security monitoring to ensure that the AWS account and environment configuration is in compliance with the CIS standards for cloud security.
 ____
 
-## Task 1: Review Architecture Diagram
+## Task 1: Enable AWS Config (skip this step if you already have it enabled)
 
 <img width="70%" src="./figure/AWS-WebServiceDiagram-v1-insecure.png">
 <p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Starting architecture diagram</b></p>
