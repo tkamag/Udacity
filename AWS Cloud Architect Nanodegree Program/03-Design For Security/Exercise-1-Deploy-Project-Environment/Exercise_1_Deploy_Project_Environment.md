@@ -102,14 +102,14 @@ Obtain the name of the S3 bucket by navigating to the Outputs section of the sta
 
 You can get these from the Outputs section of the c3-app stack.
 
-<img width="100%" src="./figure/c3-app-outputs2.png">
+<img width="100%" src="./figure/c3-app-outputs22.png">
 <p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Outputs section of the c3-app stack</b></p>
 
 | **Key**  | **Value**  |
 |:--|:--|
-| ApplicationInstanceIP  | [ec2-34-232-16-170.compute-1.amazonaws.com](ec2-34-232-16-170.compute-1.amazonaws.com)  |
-| ApplicationURL  | [c1-web-service-alb-962176417.us-east-1.elb.amazonaws.com](c1-web-service-alb-962176417.us-east-1.elb.amazonaws.com)  |
-| AttackInstanceIP  | 	[ec2-107-21-198-133.compute-1.amazonaws.com](ec2-107-21-198-133.compute-1.amazonaws.com)  |
+| ApplicationInstanceIP  | [ec2-52-207-156-250.compute-1.amazonaws.com](ec2-52-207-156-250.compute-1.amazonaws.com)  |
+| ApplicationURL  | [c1-web-service-alb-1211663006.us-east-1.elb.amazonaws.com](c1-web-service-alb-1211663006.us-east-1.elb.amazonaws.com)  |
+| AttackInstanceIP  | 	[ec2-34-238-127-30.compute-1.amazonaws.com](ec2-34-238-127-30.compute-1.amazonaws.com)  |
 
 #### 3. Upload data to S3 buckets
 
