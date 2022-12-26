@@ -5,13 +5,13 @@ ____
 
 ## Task 1: Brute force attack to exploit SSH ports facing the internet and an insecure configuration on the server
 
-### 1. Log into the attack simulation server using your SSH key-pair
+#### 1. Log into the attack simulation server using your SSH key-pair
 
 ````bash
 ssh -i <your private key file> ubuntu@<AttackInstanceIP>
 ````
 
-### 2. Run the below commands to start a brute force attack against the application server. You will need the application server hostname for this
+#### 2. Run the below commands to start a brute force attack against the application server. You will need the application server hostname for this
 
 ````bash
 date
@@ -23,7 +23,7 @@ You should see output similar to the following.
 <img width="100%" src="./figure/Attack_data.png">
 <p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Attack simulation server using your SSH key-pair</b></p>
 
-### 3. Answer the following questions
+#### 3. Answer the following questions
 
 1. What findings were detected related to the brute force attack?
 
@@ -46,7 +46,7 @@ Submit text answers in E3T1.txt.
 
 Imagine a scenario where API keys used by the application server to read data from S3 were discovered and stolen by the brute force attack. This provides the attack instance the same API privileges as the application instance. We can test this scenario by attempting to use the API to read data from the secrets S3 bucket.
 
-### 1. Make sure you're still logged into the attack instance and run the following API calls to view and download files from the secret recipes S3 bucket. You will need the name of the S3 bucket for this
+#### 1. Make sure you're still logged into the attack instance and run the following API calls to view and download files from the secret recipes S3 bucket. You will need the name of the S3 bucket for this
 
 ````bash
 # view the files in the secret recipes bucket
