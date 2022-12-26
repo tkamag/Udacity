@@ -30,4 +30,4 @@ You will need to clone or download this [GitHub repo](https://github.com/udacity
 
 ## [Exercise 2: Enable Security Monitoring](./Exercice-2-Enable-Security-Monitoring/Exercise_2_Enable_Security_Monitoring.md)
 
-## [Part3: Website Resiliency](./Part3_Website_Resiliency.md)
+## [Exercise 3 - Attack Simulation](./Part3_Website_Resiliency.md)
