@@ -1,51 +1,70 @@
-# Exercise 2 - Enable Security Monitoring
+# Exercise 3 - Attack Simulation
 
-First, we will set up security monitoring to ensure that the AWS account and environment configuration is in compliance with the CIS standards for cloud security.
+Now you will run scripts that will simulate the following attack conditions: Making an SSH connection to the application server using brute force password cracking. Capturing secret recipe files from the s3 bucket using stolen API keys.
 ____
 
-## Task 1: Enable Security Monitoring using AWS Native Tools
+## Task 1: Brute force attack to exploit SSH ports facing the internet and an insecure configuration on the server
 
-First, we will set up security monitoring to ensure that the AWS account and environment configuration is in compliance with the CIS standards for cloud security.
+### 1. Log into the attack simulation server using your SSH key-pair
 
-### 1. Enable AWS Config (skip this step if you already have it enabled)
+````bash
+ssh -i <your private key file> ubuntu@<AttackInstanceIP>
+````
 
-### 2. Enable AWS Security Hub
+### 2. Run the below commands to start a brute force attack against the application server. You will need the application server hostname for this
 
-### 3. Enable AWS Inspector scan
+````bash
+date
+hydra -l ubuntu -P rockyou.txt ssh://<YourApplicationServerDnsNameHere>
+````
 
-### 4. Enable AWS Guard Duty
+You should see output similar to the following.
 
-## Task 2: Identify and Triage Vulnerabilities
+<img width="100%" src="./figure/Attack_data.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Attack simulation server using your SSH key-pair</b></p>
 
-Please submit screenshots of:
+### 3. Answer the following questions
 
-* **AWS Config** - showing non-compliant rules
+1. What findings were detected related to the brute force attack?
 
-* **AWS Inspector** - showing scan results
+2. Take a screenshot of the Guard Duty findings specific to the attack. Title this screenshot E3T1_guardduty.png.
 
-* **AWS Security Hub** - showing compliance standards for CIS foundations.
+3. Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information?
 
-Name the files ``E2T2_config.png``, ``E2T2_inspector.png``, ``E2T2_securityhub.png`` respectively.
+Submit text answers in E3T1.txt.
 
-Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project. Provide recommendations on how to remediate the vulnerabilities. Submit your findings in ``E2T2.txt``
+### Deliverables
+
+* E3T1_guardduty.png - Screenshot of Guard Duty findings specific to the Exercise 3, Task 1 attack.
+
+<img width="100%" src="./figure/E3T1_guardduty.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> ScreenShot Of GuarDuty</b></p>
+
+* [E3T1.txt](./E3T1.txt) - Answer to the questions at the end of Exercise 3, Task 1.
+
+## Task 2: Accessing Secret Recipe Data File from S3
+
+Imagine a scenario where API keys used by the application server to read data from S3 were discovered and stolen by the brute force attack. This provides the attack instance the same API privileges as the application instance. We can test this scenario by attempting to use the API to read data from the secrets S3 bucket.
+
+### 1. Make sure you're still logged into the attack instance and run the following API calls to view and download files from the secret recipes S3 bucket. You will need the name of the S3 bucket for this
+
+````bash
+# view the files in the secret recipes bucket
+aws s3 ls  s3://<BucketNameRecipesSecret>/ --region us-east-1
+
+# download the files
+aws s3 cp s3://<BucketNameRecipesSecret>/secret_recipe.txt  .  --region us-east-1
+
+# view contents of the file
+cat secret_recipe.txt
+````
+
+<img width="100%" src="./figure/download_files.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> View Files</b></p>
 
 `**Deliverables**:
 
-* **E2T2_config.png** - Screenshot of AWS Config showing non-compliant rules.
+* **E3T2_s3breach.png** - Screenshot showing the resulting breach after the brute force attack.
 
-<img width="100%" src="./figure/E2T2_config.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Screenshot of AWS Config</b></p>
-
-* **E2T2_inspector.png** - Screenshot of AWS Inspector showing scan results.
-
-<img width="100%" src="./figure/E2T2 Inspector.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Screenshot of AWS Inspector</b></p>
-
-* **E2T2_securityhub.png** - Screenshot of AWS Security Hub showing compliance standards for CIS foundations.
-
-<img width="100%" src="./figure/E2T2_securityhub.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Screenshot of AWS SecurityHub</b></p>
-
-**Deliverables**:
-
-* [E2T2.txt](./E2T2.txt) - Text file identifying 2 poor security practices with justification.
+<img width="100%" src="./figure/E3T2_s3breach.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Screenshot showing the breach</b></p>
