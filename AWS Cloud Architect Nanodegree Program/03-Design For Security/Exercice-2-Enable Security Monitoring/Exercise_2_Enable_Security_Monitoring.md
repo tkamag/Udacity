@@ -3,144 +3,51 @@
 First, we will set up security monitoring to ensure that the AWS account and environment configuration is in compliance with the CIS standards for cloud security.
 ____
 
-## Task 1: Enable AWS Config (skip this step if you already have it enabled)
+## Task 1: Enable Security Monitoring using AWS Native Tools
 
-<img width="70%" src="./figure/AWS-WebServiceDiagram-v1-insecure.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Starting architecture diagram</b></p>
-____
+First, we will set up security monitoring to ensure that the AWS account and environment configuration is in compliance with the CIS standards for cloud security.
 
-## Task 2: Review CloudFormation Template
+### 1. Enable AWS Config (skip this step if you already have it enabled)
 
-In this task, the objective is to familiarize yourself with the starter code and to get you up and running quickly. Spend a few minutes going through the ``.yml`` files in the starter folder to get a feel for how parts of the code will map to the components in the architecture diagram.
+### 2. Enable AWS Security Hub
 
-Additionally, a CloudFormation template have been provided which will deploy the following resources in AWS:
+### 3. Enable AWS Inspector scan
 
-#### 1. VPC Stack for the underlying network
+### 4. Enable AWS Guard Duty
 
-* 1.1 A VPC with 2 public subnets, one private subnet, and internet gateways etc for internet access.
-  * [c3-vpc.Yaml](./CloudFormation/c3-vpc-tk-nd202212.yml)
+## Task 2: Identify and Triage Vulnerabilities
 
-#### 2; S3 bucket stack
+Please submit screenshots of:
 
-* 2.1 2 S3 buckets that will contain data objects for the application.
-  * [c3-s3.Yaml](./CloudFormation/c3-s3-tk-nd202212.yml)
+* **AWS Config** - showing non-compliant rules
 
-#### 3. Application stack
+* **AWS Inspector** - showing scan results
 
-* An EC2 instance that will act as an external attacker from which we will test the ability of our environment to handle threats
+* **AWS Security Hub** - showing compliance standards for CIS foundations.
 
-* An EC2 instance that will be running a simple web service.
+Name the files ``E2T2_config.png``, ``E2T2_inspector.png``, ``E2T2_securityhub.png`` respectively.
 
-* Application LoadBalancer
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project. Provide recommendations on how to remediate the vulnerabilities. Submit your findings in ``E2T2.txt``
 
-* Security groups
+`**Deliverables**:
 
-* IAM role
-  * [c3-app.Yaml](./CloudFormation/c3-app-tk-nd202212.yml)
+* **E2T2_config.png** - Screenshot of AWS Config showing non-compliant rules.
 
-## Task 3: Deployment of Initial Infrastructure
+<img width="100%" src="./figure/E2T2_config.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Screenshot of AWS Config</b></p>
 
-In this task, the objective is to deploy the CloudFormation stacks that will create the below environment.
+* **E2T2_inspector.png** - Screenshot of AWS Inspector showing scan results.
 
-### 1. From the root directory of the repository - execute the below command to deploy the templates.
-#### A.1. Deploy the S3 buckets
+<img width="100%" src="./figure/E2T2 Inspector.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Screenshot of AWS Inspector</b></p>
 
-````python
-aws cloudformation create-stack
-    --region us-east-1
-    --stack-name c3-s3
-    --template-body file://CloudFormation/c3-s3-tk-nd202212.yml
-````
+* **E2T2_securityhub.png** - Screenshot of AWS Security Hub showing compliance standards for CIS foundations.
 
-Result:
+<img width="100%" src="./figure/E2T2_securityhub.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Screenshot of AWS SecurityHub</b></p>
 
-````JSON
-{
-    "StackId": "arn:aws:cloudformation:us-east-1:293591104301:stack/c3-s3/ad452fe0-840c-11ed-bdba-0a65dd233c97"
-}
-````
-
-#### A.2. Deploy the VPC and Subnets
-
-````python
-aws cloudformation create-stack
-    --region us-east-1
-    --stack-name c3-vpc
-    --template-body file://CloudFormation/c3-vpc-tk-nd202212.yml
-````
-
-Result:
-
-````JSON
-{
-    "StackId": "arn:aws:cloudformation:us-east-1:293591104301:stack/c3-vpc/6ca30e20-840d-11ed-be30-0e2f3ffeccf1"
-}
-````
-
-#### A.3. Deploy the Application Stack
-
-````python
-aws cloudformation create-stack
-    --region us-east-1
-    --stack-name c3-app
-    --template-body file://CloudFormation/c3-app-tk-nd202212.yml
-    --parameters ParameterKey=KeyPair,ParameterValue=c3-n3-key
-    --capabilities CAPABILITY_IAM
-````
-
-Result:
-
-````JSON
-{
-    "StackId": "arn:aws:cloudformation:us-east-1:293591104301:stack/c3-app/67349ab0-840f-11ed-b4fa-12f58f880c2b"
-}
-````
-#### 2. Once you see Status is CREATE_COMPLETE for all 3 stacks, obtain the required parameters needed for the project.
-
-Obtain the name of the S3 bucket by navigating to the Outputs section of the stack:
-
-<img width="130%" src="./figure/stacks_completed.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Successful CloudFormation Infrastructure</b></p>
-
-You can get these from the Outputs section of the c3-app stack.
-
-<img width="100%" src="./figure/c3-app-outputs2.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Outputs section of the c3-app stack</b></p>
-
-| **Key**  | **Value**  |
-|:--|:--|
-| ApplicationInstanceIP  | [ec2-34-232-16-170.compute-1.amazonaws.com](ec2-34-232-16-170.compute-1.amazonaws.com)  |
-| ApplicationURL  | [c1-web-service-alb-962176417.us-east-1.elb.amazonaws.com](c1-web-service-alb-962176417.us-east-1.elb.amazonaws.com)  |
-| AttackInstanceIP  | 	[ec2-107-21-198-133.compute-1.amazonaws.com](ec2-107-21-198-133.compute-1.amazonaws.com)  |
-
-#### 3. Upload data to S3 buckets
-
-Upload the free recipes to the free recipe S3 bucket from step 2. Do this by typing this command into the console (you will replace <BucketNameRecipesFree> with your bucket name):
-
-````python
-aws s3 cp /recipe/free_recipe.txt s3://cand-c3-free-recipes-293591104301/ --region us-east-1
-````
-
-Upload the secret recipes to the secret recipe S3 bucket from step 2. Do this by typing this command into the console (you will replace <BucketNameRecipesSecret> with your bucket name):
-
-````python
-aws s3 cp /recipe/secret_recipe.txt s3://cand-c3-free-recipes-293591104301/ --region us-east-1
-````
-
-#### 4. Test the application
-Invoke the web service using the application load balancer URL:
-
-````python
-http://c1-web-service-alb-962176417.us-east-1.elb.amazonaws.com/free_recipe
-````
-
-<img width="100%" src="./figure/test_application1.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b>  Recipe for banana bread</b></p>
-
-## Task 4: Identify Bad Practices
-
-Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security. List these 2 practices, and a justification for your choices, in the text file named E1T4.txt.
+* **E2T2.txt** - Provide recommendations on how to remediate the vulnerabilities.
 
 **Deliverables**:
 
-* [E1T4.txt](./E1T4.txt) - Text file identifying 2 poor security practices with justification.
+* [E2T2.txt](./E2T2.txt) - Text file identifying 2 poor security practices with justification.
