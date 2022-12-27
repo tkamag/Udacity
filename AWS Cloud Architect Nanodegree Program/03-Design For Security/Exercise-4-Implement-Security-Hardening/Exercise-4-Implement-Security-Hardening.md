@@ -1,7 +1,6 @@
 # Exercise 4 - Implement Security Hardening
 
-____
-
+___
 ## Task 1 - Remediation plan
 
 As a ``Cloud Architect``, you have been asked to apply security best practices to the environment so that it can withstand attacks and be more secure.
