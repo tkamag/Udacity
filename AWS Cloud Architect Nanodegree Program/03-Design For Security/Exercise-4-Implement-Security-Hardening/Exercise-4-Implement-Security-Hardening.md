@@ -43,14 +43,13 @@ sudo service ssh restart
 * **E4T2_sshbruteforce.png** - Screenshot of terminal window showing the brute force attack and the remediation.
 
 <img width="100%" src="./figure/E4T2_sshbruteforce.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b>  Screenshot of terminal window showing the brute force attack and the remediation</b></p>
+<p style='text-align: center; margin-center: 3em; font-family: Serif;'><b>  Screenshot of terminal window showing the brute force attack and the remediation</b></p>
 
 ![Screenshot](./figure/E4T2_sshbruteforce.png "Screenshot")
 
-<figure>
-  <img src="./figure/E4T2_sshbruteforce.png"
-  <figcaption align = "center"><b>Fig.1 - 4K Mountains Wallpaper</b></figcaption>
-</figure>
+| ![space-1.jpg](./figure/E4T2_sshbruteforce.png) |
+|:--:|
+| <b>Image Credits - Fig.2 - 4K Mountains Wallpaper</b>|
 
 **Apply Network Controls to Restrict Application Server Traffic**
 
