@@ -45,7 +45,7 @@ sudo service ssh restart
 <img width="100%" src="./figure/E4T2_sshbruteforce.png">
 <p style='text-align: center; margin-right: 3em; font-family: Serif;'><b>  Screenshot of terminal window showing the brute force attack and the remediation</b></p>
 
-![Alternate text](./figure/E4T2_sshbruteforce.png)
+![Screenshot](./figure/E4T2_sshbruteforce.png "Screenshot")
 
 **Apply Network Controls to Restrict Application Server Traffic**
 
