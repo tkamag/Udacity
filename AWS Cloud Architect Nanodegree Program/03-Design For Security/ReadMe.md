@@ -35,3 +35,5 @@ You will need to clone or download this [GitHub repo](https://github.com/udacity
 ## [Exercise 4: Implement-Security-Hardening](./Exercise-4-Implement-Security-Hardening/Exercise-4-Implement-Security-Hardening.md)
 
 ## [Exercise 5: Designing a DevSecOps Pipeline](./Exercise-5-Designing-A-DevSecOps-Pipeline/Exercise-5-Designing-a-DevSecOps-Pipeline.md)
+
+## [Exercise 6: Clean Up](./Exercise-6-Clean-Up/Exercise-6-Clean-Up.md)
