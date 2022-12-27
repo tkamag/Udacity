@@ -18,7 +18,7 @@ As a ``Cloud Architect``, you have been asked to apply security best practices t
 
 1. To disable SSH password login on the application server instance.
 
-````bash
+```bash
 # open the file /etc/ssh/sshd_config
 sudo vi /etc/ssh/sshd_config
 
@@ -32,11 +32,11 @@ PasswordAuthentication no
 
 #restart SSH server
 sudo service ssh restart
-````
+```
 
-2. Test that this made a difference. Run the brute force attack again from Exercise 3, Task 1.
+1. Test that this made a difference. Run the brute force attack again from Exercise 3, Task 1.
 
-1. Take a screenshot of the terminal window where you ran the attack highlighting the remediation and name it E4T2_sshbruteforce.png.
+2. Take a screenshot of the terminal window where you ran the attack highlighting the remediation and name it E4T2_sshbruteforce.png.
 
 `**Deliverables**:
 
