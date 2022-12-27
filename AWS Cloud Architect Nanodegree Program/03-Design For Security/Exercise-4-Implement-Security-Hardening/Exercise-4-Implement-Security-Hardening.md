@@ -42,14 +42,9 @@ sudo service ssh restart
 
 * **E4T2_sshbruteforce.png** - Screenshot of terminal window showing the brute force attack and the remediation.
 
-<img width="100%" src="./figure/E4T2_sshbruteforce.png">
-<p style='text-align: center; margin-center: 3em; font-family: Serif;'><b>  Screenshot of terminal window showing the brute force attack and the remediation</b></p>
-
-![Screenshot](./figure/E4T2_sshbruteforce.png "Screenshot")
-
 | ![space-1.jpg](./figure/E4T2_sshbruteforce.png) |
 |:--:|
-| <b>Image Credits - Fig.2 - 4K Mountains Wallpaper</b>|
+| <b>Screenshot of terminal window showing the brute force attack and the remediation</b>|
 
 **Apply Network Controls to Restrict Application Server Traffic**
 
@@ -63,13 +58,15 @@ sudo service ssh restart
 
 * E4T2_networksg.png - Screenshot of the security group change.
 
-<img width="100%" src="./figure/E4T2_networksg.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b>  Screenshot of the security group change</b></p>
+| ![space-1.jpg](./figure/E4T2_networksg.png) |
+|:--:|
+| <b>Screenshot of the security group change</b>|
 
 * E4T2_sshattempt.png - Screenshot of your SSH attempt.
 
-<img width="100%" src="./figure/E4T2_sshattempt.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b>  Screenshot of your SSH attempt</b></p>
+| ![space-1.jpg](./figure/E4T2_sshattempt.png) |
+|:--:|
+| <b>Screenshot of your SSH attempt</b>|
 
 **Least Privilege Access to S3**
 
@@ -83,13 +80,15 @@ sudo service ssh restart
 
 * E4T2_s3iampolicy.png - Screenshot of the updated IAM policy.
 
-<img width="100%" src="./figure/E4T2_s3iampolicy.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b>  Screenshot of the updated IAM policy</b></p>
+| ![space-1.jpg](./figure/E4T2_s3iampolicy.png) |
+|:--:|
+| <b>Screenshot of the updated IAM policy</b>|
 
 * E4T2_s3copy.png - Screenshot of the failed copy attempt.
 
-<img width="100%" src="./figure/E4T2_s3copy.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b>  Screenshot of the failed copy attempt</b></p>
+| ![space-1.jpg](./figure/E4T2_s3copy.png) |
+|:--:|
+| <b>Screenshot of the failed copy attempt</b>|
 
 **Apply Default Server-side Encryption to the S3 Bucket**
 
@@ -102,8 +101,9 @@ Capture the screenshot of the secret recipes bucket showing that default encrypt
 
 * E4T2_s3encryption.png - Screenshot of the S3 bucket policy.
 
-<img width="100%" src="./figure/E4T2_s3encryption.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b>  Screenshot of the S3 bucket policy</b></p>
+| ![space-1.jpg](./figure/E4T2_s3encryption.png) |
+|:--:|
+| <b>Screenshot of the S3 bucket policy</b>|
 
 ## Task 3: Check Monitoring Tools to see if the Changes that were made have Reduced the Number of Findings
 
@@ -119,12 +119,21 @@ Capture the screenshot of the secret recipes bucket showing that default encrypt
 
 * E4T3_securityhub.png - Screenshot of Security Hub after reevaluating the number of findings.
 
-<img width="100%" src="./figure/E4T3_securityhub.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b>   Screenshot of Security Hub after reevaluating the number of findings</b></p>
+| ![space-1.jpg](./figure/E4T3_securityhub.png) |
+|:--:|
+| <b>Screenshot of Security Hub after reevaluating the number of findings</b>|
 
 * E4T3_config.png - Screenshot of Config after reevaluating the number of findings.
 
+| ![space-1.jpg](./figure/E4T3_config.png) |
+|:--:|
+| <b>Screenshot of Config after reevaluating the number of findings</b>|
+
 * E4T3_inspector.png - Screenshot of Inspector after reevaluating the number of findings.
+
+| ![space-1.jpg](./figure/E4T3_inspector.png) |
+|:--:|
+| <b>Screenshot of Inspector after reevaluating the number of findings</b>|
 
 ## Task 4: Questions and Analysis
 
@@ -140,7 +149,7 @@ Submit your answers in E4T4.txt.
 
 **Deliverables**:
 
-* E4T4.txt - Answers from prompts in Exercise 4, Task 4.
+* [E4T4.txt](./E4T4.txt) - Answers from prompts in Exercise 4, Task 4.
 
 **Optional Standout Suggestion Task 5 - Additional Hardening**
 
