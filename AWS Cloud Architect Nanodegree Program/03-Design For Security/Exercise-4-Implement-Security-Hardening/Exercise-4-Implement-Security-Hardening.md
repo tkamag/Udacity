@@ -36,12 +36,16 @@ sudo service ssh restart
 
 2. Test that this made a difference. Run the brute force attack again from Exercise 3, Task 1.
 
-3. Take a screenshot of the terminal window where you ran the attack highlighting the remediation and name it E4T2_sshbruteforce.png.
-
+1. Take a screenshot of the terminal window where you ran the attack highlighting the remediation and name it E4T2_sshbruteforce.png.
 
 `**Deliverables**:
 
 * **E4T2_sshbruteforce.png** - Screenshot of terminal window showing the brute force attack and the remediation.
+
+<img width="100%" src="./figure/E4T2_sshbruteforce.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b>  Screenshot of terminal window showing the brute force attack and the remediation</b></p>
+
+![Alternate text](./figure/E4T2_sshbruteforce.png)
 
 **Apply Network Controls to Restrict Application Server Traffic**
 
@@ -55,7 +59,13 @@ sudo service ssh restart
 
 * E4T2_networksg.png - Screenshot of the security group change.
 
+<img width="100%" src="./figure/E4T2_networksg.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b>  Screenshot of the security group change</b></p>
+
 * E4T2_sshattempt.png - Screenshot of your SSH attempt.
+
+<img width="100%" src="./figure/E4T2_sshattempt.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b>  Screenshot of your SSH attempt</b></p>
 
 **Least Privilege Access to S3**
 
@@ -69,7 +79,13 @@ sudo service ssh restart
 
 * E4T2_s3iampolicy.png - Screenshot of the updated IAM policy.
 
+<img width="100%" src="./figure/E4T2_s3iampolicy.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b>  Screenshot of the updated IAM policy</b></p>
+
 * E4T2_s3copy.png - Screenshot of the failed copy attempt.
+
+<img width="100%" src="./figure/E4T2_s3copy.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b>  Screenshot of the failed copy attempt</b></p>
 
 **Apply Default Server-side Encryption to the S3 Bucket**
 
@@ -82,9 +98,12 @@ Capture the screenshot of the secret recipes bucket showing that default encrypt
 
 * E4T2_s3encryption.png - Screenshot of the S3 bucket policy.
 
+<img width="100%" src="./figure/E4T2_s3encryption.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b>  Screenshot of the S3 bucket policy</b></p>
+
 ## Task 3: Check Monitoring Tools to see if the Changes that were made have Reduced the Number of Findings
 
-1. Go to AWS inspector and run the inspector scan that was run in Exercise 
+1. Go to AWS inspector and run the inspector scan that was run in Exercise
 
 2. After 20-30 mins - check Security Hub to see if the finding count reduced.
 
@@ -95,6 +114,9 @@ Capture the screenshot of the secret recipes bucket showing that default encrypt
 **Deliverables**:
 
 * E4T3_securityhub.png - Screenshot of Security Hub after reevaluating the number of findings.
+
+<img width="100%" src="./figure/E4T3_securityhub.png">
+<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b>   Screenshot of Security Hub after reevaluating the number of findings</b></p>
 
 * E4T3_config.png - Screenshot of Config after reevaluating the number of findings.
 
