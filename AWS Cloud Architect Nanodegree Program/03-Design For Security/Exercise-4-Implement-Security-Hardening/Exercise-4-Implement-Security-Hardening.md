@@ -47,6 +47,11 @@ sudo service ssh restart
 
 ![Screenshot](./figure/E4T2_sshbruteforce.png "Screenshot")
 
+<figure>
+  <img src="./figure/E4T2_sshbruteforce.png"
+  <figcaption>MDN Logo</figcaption>
+</figure>
+
 **Apply Network Controls to Restrict Application Server Traffic**
 
 1. Update the security group which is assigned to the web application instance. Any method you use to do this is acceptable. The requirement is that we only allow connections to port 5000 from the public subnet where the application load balancer resides.
