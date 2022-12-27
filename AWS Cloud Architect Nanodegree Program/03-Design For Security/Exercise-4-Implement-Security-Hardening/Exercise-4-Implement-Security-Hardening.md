@@ -49,7 +49,7 @@ sudo service ssh restart
 
 <figure>
   <img src="./figure/E4T2_sshbruteforce.png"
-  <figcaption>MDN Logo</figcaption>
+  <figcaption align = "center"><b>Fig.1 - 4K Mountains Wallpaper</b></figcaption>
 </figure>
 
 **Apply Network Controls to Restrict Application Server Traffic**
