@@ -20,8 +20,9 @@ hydra -l ubuntu -P rockyou.txt ssh://<YourApplicationServerDnsNameHere>
 
 You should see output similar to the following.
 
-<img width="100%" src="./figure/Attack_data.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Attack simulation server using your SSH key-pair</b></p>
+| ![space-1.jpg](./figure/new/Attack_data1.png) |
+|:--:|
+| <b>Attack simulation server using your SSH key-pair</b>|
 
 #### 3. Answer the following questions
 
@@ -37,8 +38,10 @@ Submit text answers in E3T1.txt.
 
 * E3T1_guardduty.png - Screenshot of Guard Duty findings specific to the Exercise 3, Task 1 attack.
 
-<img width="100%" src="./figure/E3T1_guardduty.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> ScreenShot Of GuarDuty</b></p>
+
+| ![space-1.jpg](./figure/E3T1_guardduty.png) |
+|:--:|
+| <b>ScreenShot Of GuarDuty</b>|
 
 * [E3T1.txt](./E3T1.txt) - Answer to the questions at the end of Exercise 3, Task 1.
 
@@ -59,12 +62,14 @@ aws s3 cp s3://<BucketNameRecipesSecret>/secret_recipe.txt  .  --region us-east-
 cat secret_recipe.txt
 ````
 
-<img width="100%" src="./figure/download_files.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> View Files</b></p>
+| ![space-1.jpg](./figure/new/download_files.png) |
+|:--:|
+| <b>View Files</b>|
 
 `**Deliverables**:
 
 * **E3T2_s3breach.png** - Screenshot showing the resulting breach after the brute force attack.
 
-<img width="100%" src="./figure/E3T2_s3breach.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Screenshot showing the breach</b></p>
+| ![space-1.jpg](./figure/new/E3T2_s3breach.png) |
+|:--:|
+| <b>Screenshot showing the breach</b>|
