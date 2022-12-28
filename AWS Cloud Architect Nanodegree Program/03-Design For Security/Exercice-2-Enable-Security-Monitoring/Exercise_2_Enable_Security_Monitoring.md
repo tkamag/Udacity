@@ -33,18 +33,25 @@ Research and analyze which of the vulnerabilities appear to be related to the co
 
 * **E2T2_config.png** - Screenshot of AWS Config showing non-compliant rules.
 
-<img width="100%" src="./figure/E2T2_config.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Screenshot of AWS Config</b></p>
+| ![space-1.jpg](./figure/New/E2T2_config.png) |
+|:--:|
+| <b>Screenshot of AWS Config</b>|
 
 * **E2T2_inspector.png** - Screenshot of AWS Inspector showing scan results.
 
-<img width="100%" src="./figure/E2T2 Inspector.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Screenshot of AWS Inspector</b></p>
+| ![space-1.jpg](./figure/New/E2T2_Inspector.png) |
+|:--:|
+| <b>Screenshot of AWS Inspector</b>|
+
+| ![space-1.jpg](./figure/New/E2T2_Assessment_Runs.png) |
+|:--:|
+| <b>Screenshot of AWS Inspector- Assessment_Runs</b>|
 
 * **E2T2_securityhub.png** - Screenshot of AWS Security Hub showing compliance standards for CIS foundations.
 
-<img width="100%" src="./figure/E2T2_securityhub.png">
-<p style='text-align: center; margin-right: 3em; font-family: Serif;'><b> Screenshot of AWS SecurityHub</b></p>
+| ![space-1.jpg](./figure/New/E2T2_securityhub.png) |
+|:--:|
+| <b>Screenshot of AWS Inspector</b>|
 
 **Deliverables**:
 
