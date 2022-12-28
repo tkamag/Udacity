@@ -41,7 +41,7 @@ sudo service ssh restart
 
 * **E4T2_sshbruteforce.png** - Screenshot of terminal window showing the brute force attack and the remediation.
 
-| ![space-1.jpg](./figure/E4T2_sshbruteforce.png) |
+| ![space-1.jpg](./figure/new/E4T2_sshbruteforce.png) |
 |:--:|
 | <b>Screenshot of terminal window showing the brute force attack and the remediation</b>|
 
@@ -63,7 +63,7 @@ sudo service ssh restart
 
 * E4T2_sshattempt.png - Screenshot of your SSH attempt.
 
-| ![space-1.jpg](./figure/E4T2_sshattempt.png) |
+| ![space-1.jpg](./figure/new/E4T2_sshattempt.png) |
 |:--:|
 | <b>Screenshot of your SSH attempt</b>|
 
@@ -85,7 +85,7 @@ sudo service ssh restart
 
 * E4T2_s3copy.png - Screenshot of the failed copy attempt.
 
-| ![space-1.jpg](./figure/E4T2_s3copy.png) |
+| ![space-1.jpg](./figure/new/E4T2_s3copy.png) |
 |:--:|
 | <b>Screenshot of the failed copy attempt</b>|
 
@@ -118,19 +118,19 @@ Capture the screenshot of the secret recipes bucket showing that default encrypt
 
 * E4T3_securityhub.png - Screenshot of Security Hub after reevaluating the number of findings.
 
-| ![space-1.jpg](./figure/E4T3_securityhub.png) |
+| ![space-1.jpg](./figure/new/E4T3_securityhub.png) |
 |:--:|
 | <b>Screenshot of Security Hub after reevaluating the number of findings</b>|
 
 * E4T3_config.png - Screenshot of Config after reevaluating the number of findings.
 
-| ![space-1.jpg](./figure/E4T3_config.png) |
+| ![space-1.jpg](./figure/new/E4T3_config.png) |
 |:--:|
 | <b>Screenshot of Config after reevaluating the number of findings</b>|
 
 * E4T3_inspector.png - Screenshot of Inspector after reevaluating the number of findings.
 
-| ![space-1.jpg](./figure/E4T3_inspector.png) |
+| ![space-1.jpg](./figure/new/E4T3_inspector.png) |
 |:--:|
 | <b>Screenshot of Inspector after reevaluating the number of findings</b>|
 
